@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile page</title>
+
+        <!-- favicon link -->
+        <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+        <!-- Bootstrap cdn link -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+
+        <!-- Google icons link -->
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+        <link rel="stylesheet" href="./assets/css/profile.css">
+    </head>
+    <body>
+        <!-- Header portion -->
+        <header>
+            <!-- Basic navbar -->
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/images/logo.png" alt>
+                    </a>
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasBottom">
+                        <span class="material-symbols-outlined"
+                            style="color: white; border: none; height: 1.25rem; width: 1.25rem; outline: none; :active{outline: none;}">
+                            menu
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarMenu">
+                        <div class="navbar-nav">
+                            <a class="nav-link" href="#home"
+                                id="options">Home</a>
+                            <a class="nav-link" href="#podcasts"
+                                id="options">Podcasts</a>
+                            <a class="nav-link" href="#podcasters"
+                                id="options">Podcasters</a>
+                            <a class="nav-link" href="Blog.html"
+                                id="options">Blog</a>
+                            <a href="#" class="nav-link"
+                                id="options">Contact</a>
+                            <div class="logo-menu">
+                                <a href="#" id="options"
+                                    class="nav-link">
+                                    <span
+                                        class="material-symbols-outlined searchbutton"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#searchbox">
+                                        search
+                                    </span></a>
+                                <a href="https://podcasts.google.com/"
+                                    class="nav-link"
+                                    id="options"><span
+                                        class="material-symbols-outlined">info
+                                    </span></a>
+
+                                <a href="https://podcasts.google.com/"
+                                    class="nav-link"
+                                    id="options"><span
+                                        class="material-symbols-outlined">
+                                        download
+                                    </span></a>
+                                <a href="Payment.html" class="nav-link donate"
+                                    id="options" type="button"><i
+                                        class="fa-brands fa-google-pay gpay"></i>Donate</a>
+                                <div class="collapse" id="searchbox">
+                                    <div id="close-btn">
+                                        <span
+                                            class="material-symbols-outlined">close</span>
+                                    </div>
+                                    <form
+                                        action="https://www.google.com/search"
+                                        method="get" target="_blank">
+                                        <input type="text" name="q"
+                                            id="search-text"
+                                            placeholder="Search"
+                                            class="form-control">
+                                        <button type="submit"
+                                            class="btn submit-button">Search</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Specialized class for making the menu to pop off from bottom -->
+            <div class="offcanvas-container">
+                <div id="offcanvasBottom" class="offcanvas offcanvas-bottom">
+                    <a class="nav-link" href="#home" id="options">Home</a>
+                    <a class="nav-link" href="#podcasts"
+                        id="options">Podcasts</a>
+                    <a class="nav-link" href="#" id="options">Podcasters</a>
+                    <a class="nav-link" href="Blog.html" id="options">Blog</a>
+                    <a href="#" class="nav-link" id="options">Contact</a>
+                    <div class="logo-menu">
+                        <a href="#" id="options"
+                            class="nav-link"><span
+                                class="material-symbols-outlined searchbutton"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#searchbox">
+                                search
+                            </span>
+                        </a>
+                        <a href="https://podcasts.google.com/" class="nav-link"
+                            id="options"><span
+                                class="material-symbols-outlined">info
+                            </span></a>
+
+                        <a href="https://podcasts.google.com/" class="nav-link"
+                            id="options"><span
+                                class="material-symbols-outlined">
+                                download
+                            </span></a>
+                        <div class="collapse" id="searchbox">
+                            <div id="close-btn">
+                                <span
+                                    class="material-symbols-outlined">close</span>
+                            </div>
+                            <form
+                                action="https://www.google.com/search"
+                                method="get" target="_blank">
+                                <input type="text" name="q"
+                                    id="search-text"
+                                    placeholder="Search"
+                                    class="form-control">
+                                <button type="submit"
+                                    class="btn submit-button">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+
+                <div class="small-container single-product container">
+
+                    <div class="column-1">
+                        <img src="product1.jpeg" alt="tshirt1" id="profile-img">
+                    </div>
+                    <div class="column-2">
+                        <h1>Red T-shirt</h1>
+
+                        <div class="other-options-content">
+                            <h5 class="episodes">Episodes : 00</h5>
+                            <a href class="likeBtn">
+                                <i class="fa-regular fa-heart"></i>
+                            </a>
+                            <a href class="addToPlaylist">
+                                <i class="fa-regular fa-plus"></i>
+                            </a>
+                            <input type="button" value="Subscribe"
+                                class="submitBtn">
+                        </div>
+                        <h3 style="padding-top: 3rem;">About me!</h3>
+                        <br>
+                        <p class="about-me">Lorem ipsum, dolor sit amet
+                            consectetur adipisicing
+                            elit. Laboriosam excepturi dignissimos, quaerat
+                            quibusdam quae deleniti unde? Quas rerum autem
+                            voluptatibus velit ad necessitatibus. Assumenda
+                            repudiandae dolorem doloribus unde minima
+                            veniam!</p>
+                    </div>
+                </div>
+            </main>
+
+            <footer>
+                <div class="container">
+                    <div class="newsletter-card">
+                        <div class="card-content">
+                            <h2 class="h2 card-title">Sign Up For Our
+                                Newsletter.
+                                It's
+                                Free!</h2>
+
+                            <p class="card-text">
+                                ✨ New Episodes Alert! Dive into These
+                                Podcast
+                                Gems ✨
+                            </p>
+                            <p class="extra-text">Obsessed with Podcasts? Us
+                                Too! We're your one-stop shop for all
+                                podcasting. Uncover hidden gems, stay
+                                updated on
+                                your favorite shows. Get ready to
+                                geek out and find your next podcast
+                                soulmate!
+                                ✨️</p>
+                        </div>
+
+                        <form action class="card-form" data-form>
+                            <input type="email" name="email_address"
+                                placeholder="Your Email Address" required
+                                class="input-field"
+                                data-input>
+
+                            <button type="submit" class="btn btn-primary"
+                                data-submit>Subscribe</button>
+                        </form>
+
+                    </div>
+                </div>
+            </footer>
+
+            <!-- Bootstrap JS CDN -->
+            <script
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+                crossorigin="anonymous"></script>
+
+            <!-- Font awesome icons and font CDN -->
+            <script src="https://kit.fontawesome.com/a2d9831cfa.js"
+                crossorigin="anonymous"></script>
+
+            <script src="./assets/js/script1.js"></script>
+        </body>
+    </html>

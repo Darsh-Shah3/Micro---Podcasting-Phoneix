@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Micro - Podcasting Phoenix!</title>
+
+        <!-- favicon link -->
+        <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+        <!-- Bootstrap cdn link -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+
+        <!-- google font and icons link-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kite+One&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+        <!-- custom css link -->
+        <link rel="stylesheet" href="./assets/css/landing.css">
+    </head>
+    <body>
+
+        <!-- Header portion -->
+        <header>
+            <!-- Basic navbar -->
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/images/logo.png" alt>
+                    </a>
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasBottom">
+                        <span class="material-symbols-outlined"
+                            style="color: white; border: none; height: 1.25rem; width: 1.25rem; outline: none; :active{outline: none;}">
+                            menu
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarMenu">
+                        <div class="navbar-nav">
+                            <a class="nav-link" href="#home"
+                                id="options">Home</a>
+                            <a class="nav-link" href="#podcasts"
+                                id="options">Podcasts</a>
+                            <a class="nav-link" href="#podcasters"
+                                id="options">Podcasters</a>
+                            <a class="nav-link" href="Blog.html"
+                                id="options">Blog</a>
+                            <a href="#" class="nav-link"
+                                id="options">Contact</a>
+                            <div class="logo-menu">
+                                <a href="#" id="options"
+                                    class="nav-link">
+                                    <span
+                                        class="material-symbols-outlined searchbutton"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#searchbox">
+                                        search
+                                    </span></a>
+                                <a href="https://podcasts.google.com/"
+                                    class="nav-link"
+                                    id="options"><span
+                                        class="material-symbols-outlined">info
+                                    </span></a>
+
+                                <a href="https://podcasts.google.com/"
+                                    class="nav-link"
+                                    id="options"><span
+                                        class="material-symbols-outlined">
+                                        download
+                                    </span></a>
+                                <a href="Payment.html" class="nav-link donate"
+                                    id="options" type="button"><i
+                                        class="fa-brands fa-google-pay gpay"></i>Donate</a>
+                                <div class="collapse" id="searchbox">
+                                    <div id="close-btn">
+                                        <span
+                                            class="material-symbols-outlined">close</span>
+                                    </div>
+                                    <form
+                                        action="https://www.google.com/search"
+                                        method="get" target="_blank">
+                                        <input type="text" name="q"
+                                            id="search-text"
+                                            placeholder="Search"
+                                            class="form-control">
+                                        <button type="submit"
+                                            class="btn submit-button">Search</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Specialized class for making the menu to pop off from bottom -->
+            <div class="offcanvas-container">
+                <div id="offcanvasBottom" class="offcanvas offcanvas-bottom">
+                    <a class="nav-link" href="#home" id="options">Home</a>
+                    <a class="nav-link" href="#podcasts"
+                        id="options">Podcasts</a>
+                    <a class="nav-link" href="#" id="options">Podcasters</a>
+                    <a class="nav-link" href="Blog.html" id="options">Blog</a>
+                    <a href="#" class="nav-link" id="options">Contact</a>
+                    <div class="logo-menu">
+                        <a href="#" id="options"
+                            class="nav-link"><span
+                                class="material-symbols-outlined searchbutton"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#searchbox">
+                                search
+                            </span>
+                        </a>
+                        <a href="https://podcasts.google.com/" class="nav-link"
+                            id="options"><span
+                                class="material-symbols-outlined">info
+                            </span></a>
+
+                        <a href="https://podcasts.google.com/" class="nav-link"
+                            id="options"><span
+                                class="material-symbols-outlined">
+                                download
+                            </span></a>
+                        <div class="collapse" id="searchbox">
+                            <div id="close-btn">
+                                <span
+                                    class="material-symbols-outlined">close</span>
+                            </div>
+                            <form
+                                action="https://www.google.com/search"
+                                method="get" target="_blank">
+                                <input type="text" name="q"
+                                    id="search-text"
+                                    placeholder="Search"
+                                    class="form-control">
+                                <button type="submit"
+                                    class="btn submit-button">Search</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- main content -->
+            <main>
+                <!-- Home page main hero content -->
+                <section id="home">
+                    <div class="container">
+                        <div class="row">
+                            <div
+                                class="col-lg-6">
+                                <img src="./assets/images/hero-title.png"
+                                    alt="Podcast" class="hero-title">
+                                <p class="hero-text">
+                                    School's out (of ideas)! Get your daily dose
+                                    of
+                                    laughter, knowledge bombs, and maybe a
+                                    sprinkle
+                                    of existential dread. (Don't worry, it's
+                                    fun!)
+                                </p>
+                                <div
+                                    class="hero-btn-group d-flex justify-content-evenly">
+                                    <button class="btn btn-primary listen">
+                                        <i class="fa-solid fa-headphones"
+                                            style="font-size: 1.25rem;"></i>
+                                        Listen Now
+                                    </button>
+                                    <div class="btn-link-wrapper ">
+                                        <p class="btn-title">Subscribe On:</p>
+                                        <a href="#" class="btn-link spotify">
+                                            <i class="fa-brands fa-spotify"
+                                                style="font-size: 1.25rem;"></i>
+                                            Spotify
+                                        </a>
+                                        <a href="#" class="btn-link youtube">
+                                            <i class="fa-brands fa-youtube"
+                                                style="font-size: 1.25rem;"></i>
+                                            Youtube
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6" id="carousel-plate">
+                                <div class="carousel-plate">
+                                    <div id="auto-play" class="carousel slide"
+                                        data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img
+                                                    src="./assets/images/Pod-1.jpeg"
+                                                    class="d-block w-100"
+                                                    alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img
+                                                    src="./assets/images/Pod-2.jpeg"
+                                                    class="d-block w-100"
+                                                    alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img
+                                                    src="./assets/images/Pod-3.jpeg"
+                                                    class="d-block w-100"
+                                                    alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img
+                                                    src="./assets/images/Pod-4.jpeg"
+                                                    class="d-block w-100"
+                                                    alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img
+                                                    src="./assets/images/Pod-5.jpeg"
+                                                    class="d-block w-100"
+                                                    alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Podcasts section -->
+                <section id="podcasts">
+                    <div class="container">
+                        <h3 class="podcast-heading">PODCASTS</h3>
+                        <ul class="podcast-list">
+                            <li>
+                                <a href="#" class="podcast-card">
+
+                                    <figure class="card-banner">
+                                        <img src="./assets/images/podcast-1.png"
+                                            alt="1 AM PODCASTS">
+
+                                        <div class="card-banner-icon">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                    </figure>
+
+                                    <div class="card-content">
+                                        <div class="card-meta">
+                                            <time datetime="2024-03-30">March
+                                                30,
+                                                2024</time>
+
+                                            <p class="pod-epi">Episode:
+                                                12<sup>th</sup></p>
+                                        </div>
+
+                                        <h3 class="h3 card-title">Lo-Fi
+                                            Lofiations:
+                                            Deep Dives When the World
+                                            Sleeps</h3>
+                                    </div>
+
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="podcast-card">
+
+                                    <figure class="card-banner">
+                                        <img src="./assets/images/podcast-2.png"
+                                            alt="LADY LIKE ">
+
+                                        <div class="card-banner-icon">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                    </figure>
+
+                                    <div class="card-content">
+                                        <div class="card-meta">
+                                            <time datetime="2024-03-30">March
+                                                30,
+                                                2024</time>
+
+                                            <p class="pod-epi">Episode:
+                                                15<sup>th</sup></p>
+                                        </div>
+
+                                        <h3 class="h3 card-title">Ask
+                                            Unladylike:
+                                            Late
+                                            Bloomer with
+                                            Forever 35</h3>
+                                    </div>
+
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="podcast-card">
+
+                                    <figure class="card-banner">
+                                        <img src="./assets/images/podcast-3.png"
+                                            alt="How to Effectively Incentivize Team Members">
+
+                                        <div class="card-banner-icon">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                    </figure>
+
+                                    <div class="card-content">
+                                        <div class="card-meta">
+                                            <time datetime="2024-03-30">March
+                                                30,
+                                                2024</time>
+
+                                            <p class="pod-epi">Episode:
+                                                06<sup>th</sup></p>
+                                        </div>
+
+                                        <h3 class="h3 card-title">How to
+                                            Effectively
+                                            Incentivize Team
+                                            Members</h3>
+                                    </div>
+
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="podcast-card">
+
+                                    <figure class="card-banner">
+                                        <img src="./assets/images/podcast-4.png"
+                                            alt="How to go from Start-Up to Scale-Up">
+
+                                        <div class="card-banner-icon">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                    </figure>
+
+                                    <div class="card-content">
+                                        <div class="card-meta">
+                                            <time datetime="2024-03-30">March
+                                                30,
+                                                2024</time>
+
+                                            <p class="pod-epi">Episode:
+                                                14<sup>th</sup></p>
+                                        </div>
+
+                                        <h3 class="h3 card-title">How to go from
+                                            Start-Up to
+                                            Scale-Up</h3>
+                                    </div>
+
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="podcast-card">
+
+                                    <figure class="card-banner">
+                                        <img src="./assets/images/Banner-5.jpeg"
+                                            alt="ESCAPING THE ALGORITHM">
+
+                                        <div class="card-banner-icon">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                    </figure>
+
+                                    <div class="card-content">
+                                        <div class="card-meta">
+                                            <time datetime="2024-03-30">March
+                                                30,
+                                                2024</time>
+
+                                            <p class="pod-epi">Episode:
+                                                19<sup>th</sup></p>
+                                        </div>
+
+                                        <h3 class="h3 card-title">Beyond the
+                                            Binary:
+                                            Exploring Life Outside the
+                                            Algorithm</h3>
+                                    </div>
+
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="podcast-card">
+
+                                    <figure class="card-banner">
+                                        <img src="./assets/images/Banner-3.jpeg"
+                                            alt="SELF CARE">
+
+                                        <div class="card-banner-icon">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                    </figure>
+
+                                    <div class="card-content">
+                                        <div class="card-meta">
+                                            <time datetime="2024-03-30">March
+                                                30,
+                                                2024</time>
+
+                                            <p class="pod-epi">Episode:
+                                                10<sup>th</sup></p>
+                                        </div>
+
+                                        <h3 class="h3 card-title">Rest,
+                                            Recharge,
+                                            Radiate</h3>
+                                    </div>
+
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="podcast-card">
+
+                                    <figure class="card-banner">
+                                        <img src="./assets/images/Banner-2.jpeg"
+                                            alt="VINTAGE">
+
+                                        <div class="card-banner-icon">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                    </figure>
+
+                                    <div class="card-content">
+                                        <div class="card-meta">
+                                            <time datetime="2024-03-30">March
+                                                30,
+                                                2024</time>
+
+                                            <p class="pod-epi">Episode:
+                                                03<sup>rd</sup></p>
+                                        </div>
+
+                                        <h3 class="h3 card-title">Cassette
+                                            Culture:
+                                            Rewinding the Best of the 90s</h3>
+                                    </div>
+
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="podcast-card">
+
+                                    <figure class="card-banner">
+                                        <img src="./assets/images/Banner-1.jpeg"
+                                            alt="LO-FI JAMS">
+
+                                        <div class="card-banner-icon">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                    </figure>
+
+                                    <div class="card-content">
+                                        <div class="card-meta">
+                                            <time datetime="2024-03-30">March
+                                                30,
+                                                2024</time>
+
+                                            <p class="pod-epi">Episode:
+                                                07<sup>th</sup></p>
+                                        </div>
+
+                                        <h3 class="h3 card-title">Cassette Tapes
+                                            &
+                                            Coffee Breaks: Lo-Fi Jams for
+                                            Creative
+                                            Flow</h3>
+                                    </div>
+
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Podcasters section -->
+                <section id="podcasters">
+                    <div class="container">
+                        <h3 class="podcaster-heading">PODCASTERS</h3>
+                        <ul class="podcaster-list">
+                            <li>
+                                <a href="#" class="podcast-card">
+
+                                    <figure class="card-banner">
+                                        <img
+                                            src="./assets/images/Podcaster-1.png"
+                                            alt="Tube Preamps, TLM103 vs. OJ 818, Podcastage's Beanies">
+
+                                        <div class="card-banner-icon">
+                                            <i class="fa-solid fa-bolt"></i>
+                                        </div>
+                                    </figure>
+
+                                    <div class="card-content">
+                                        <div class="card-meta">
+                                            <time datetime="2024-03-30">March
+                                                30,
+                                                2024</time>
+
+                                            <p class="pod-epi">Episodes: 37</p>
+                                        </div>
+
+                                        <h3 class="h3 card-title">Mic
+                                            Masala</h3>
+                                    </div>
+
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="podcast-card">
+
+                                    <figure class="card-banner">
+                                        <img
+                                            src="./assets/images/Podcaster-2.png"
+                                            alt="Ask Unladylike: Late Bloomer with Forever 35">
+
+                                        <div class="card-banner-icon">
+                                            <i class="fa-solid fa-bolt"></i>
+                                        </div>
+                                    </figure>
+
+                                    <div class="card-content">
+                                        <div class="card-meta">
+                                            <time datetime="2024-03-30">March
+                                                30,
+                                                2024</time>
+
+                                            <p class="pod-epi">Episodes: 29</p>
+                                        </div>
+
+                                        <h3 class="h3 card-title">Chai &
+                                            Chill</h3>
+                                    </div>
+
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="podcast-card">
+
+                                    <figure class="card-banner">
+                                        <img
+                                            src="./assets/images/Podcaster-3.png"
+                                            alt="How to Effectively Incentivize Team Members">
+
+                                        <div class="card-banner-icon">
+                                            <i class="fa-solid fa-bolt"></i>
+                                        </div>
+                                    </figure>
+
+                                    <div class="card-content">
+                                        <div class="card-meta">
+                                            <time datetime="2024-03-30">March
+                                                30,
+                                                2024</time>
+
+                                            <p class="pod-epi">Episodes: 35</p>
+                                        </div>
+
+                                        <h3 class="h3 card-title">Bollywood
+                                            Banter</h3>
+                                    </div>
+
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="podcast-card">
+
+                                    <figure class="card-banner">
+                                        <img src="./assets/images/See-More.jpeg"
+                                            alt="See more" id="seemore">
+
+                                        <div class="card-banner-icon">
+                                            <i
+                                                class="fa-solid fa-arrow-right"></i>
+                                        </div>
+                                    </figure>
+
+                                    <div class="card-content">
+                                        <div class="card-meta">
+                                            <time datetime="2024-03-30">March
+                                                30,
+                                                2024</time>
+
+                                            <p class="pod-epi">Episodes: 04</p>
+                                        </div>
+
+                                        <h3 class="h3 card-title">Watch more
+                                            exciting podcasts here!</h3>
+                                    </div>
+
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Newsletter section -->
+                <section class="newsletter">
+                    <div class="container">
+                        <div class="newsletter-card">
+
+                            <div class="card-content">
+                                <h2 class="h2 card-title">Sign Up For Our
+                                    Newsletter.
+                                    It's
+                                    Free!</h2>
+
+                                <p class="card-text">
+                                    ✨ New Episodes Alert! Dive into These
+                                    Podcast
+                                    Gems ✨
+                                </p>
+                                <p class="extra-text">Obsessed with Podcasts? Us
+                                    Too! We're your one-stop shop for all
+                                    podcasting. Uncover hidden gems, stay
+                                    updated on
+                                    your favorite shows. Get ready to
+                                    geek out and find your next podcast
+                                    soulmate!
+                                    ✨️</p>
+                            </div>
+
+                            <form action class="card-form" data-form>
+                                <input type="email" name="email_address"
+                                    placeholder="Your Email Address" required
+                                    class="input-field"
+                                    data-input>
+
+                                <button type="submit" class="btn btn-primary"
+                                    data-submit>Subscribe</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <hr>
+            <footer id="footer">
+
+                <div class="footer-top">
+                    <div class="container">
+
+                        <div class="footer-brand">
+                            <a href="#" class="logo">
+                                <img src="./assets/images/logo.svg"
+                                    alt="Micro logo">
+                            </a>
+
+                            <p class="footer-text">
+                                Can't stop, won't stop listening? We got endless
+                                bops for your ears, from chill vibes to
+                                mind-blowing
+                                knowledge bombs . Hit subscribe, fam!
+                                #BopsForYourEars #PodcastLove
+                            </p>
+                        </div>
+
+                        <ul class="footer-list">
+
+                            <li>
+                                <p class="footer-link-title">Start A
+                                    Conversation</p>
+                            </li>
+
+                            <li>
+                                <a href="mailto:hello@micro.com"
+                                    class="footer-link">hello@micro.com</a>
+                            </li>
+
+                            <li>
+                                <a href="tel:+0123454678"
+                                    class="footer-link">+01234
+                                    54678</a>
+                            </li>
+
+                            <li>
+                                <a href="tel:+15780346789"
+                                    class="footer-link">+1(23)045-6789</a>
+                            </li>
+
+                        </ul>
+
+                        <div class="social-list-box">
+
+                            <p class="social-title">Follow Us On:</p>
+
+                            <ul class="social-list">
+
+                                <li>
+                                    <a href="#" class="social-link">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="social-link">
+                                        <i class="fa-brands fa-x"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="social-link">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="social-link">
+                                        <i class="fa-brands fa-apple"></i>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="container">
+                        <p class="copyright">
+                            &copy; 2024. Creator : MOHIT PANDYA. All rights
+                            reserved
+                        </p>
+                    </div>
+                </div>
+
+            </footer>
+            <!-- Bootstrap JS CDN -->
+            <script
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+                crossorigin="anonymous"></script>
+
+            <!-- Font awesome icons and font CDN -->
+            <script src="https://kit.fontawesome.com/a2d9831cfa.js"
+                crossorigin="anonymous"></script>
+
+            <!-- Custom js file -->
+            <script src="./assets/js/script1.js"></script>
+        </body>
+    </html>
